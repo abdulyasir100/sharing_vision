@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preview Article</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container mt-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" id="title"></h5>
+        <p class="card-text" id="content"></p>
+        <p class="card-text"><strong>Category:</strong> <span id="category"></span></p>
+        <p class="card-text"><strong>Status:</strong> <span id="status"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set value of title
+    var title = "{{ article['Title'] }}";
+    document.getElementById("title").innerHTML = title;
+
+    // Set value of content
+    var content = "{{ article['Content'] }}";
+    document.getElementById("content").innerHTML = content;
+
+    // Set value of category
+    var category = "{{ article['Category'] }}";
+    document.getElementById("category").innerHTML = category;
+
+    // Set value of status
+    var status = "{{ article['Status'] }}";
+    document.getElementById("status").innerHTML = status;
+  </script>
+
+</body>
+</html>

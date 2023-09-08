@@ -1,0 +1,9 @@
+CREATE TABLE Posts (
+	Id INT NOT NULL AUTO_INCREMENT,
+    Title varchar(200),
+    Content Text,
+    Category varchar(100),
+    Created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Updated_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (Id)
+);

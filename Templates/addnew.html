@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Article</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Add Article</h1>
+        <form id="addform">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="Title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" id="content" name="Content" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" name="Category" required>
+            </div>
+             <div class="form-group">
+                        <label for="status">Status:</label>
+                        <button id="publishButton" onclick="clickPublish()"
+                            type="button" class="btn btn-success">Publish</button>
+                        <button id="draftButton" onclick="clickDraft()"
+                            type="button" class="btn btn-danger">Draft</button>
+                        <input id="statusnow" type="hidden" name="Status"
+                            value="Publish">
+                    </div>
+                    <button type="button" onclick="sendData()" class="btn
+                        btn-primary">Submit</button>
+    </div>
+</body>
+<script>
+        pb = document.getElementById("publishButton");
+        db = document.getElementById("draftButton");
+        sv = document.getElementById("statusnow");
+        function clickPublish() {
+            sv.value = "Publish";
+            pb.classList.remove("btn-danger");
+            db.classList.remove("btn-success");
+            pb.classList.add("btn-success");
+            db.classList.add("btn-danger");
+        }
+        function clickDraft() {
+            sv.value = "Draft";
+            pb.classList.add("btn-danger");
+            db.classList.add("btn-success");
+            pb.classList.remove("btn-success");
+            db.classList.remove("btn-danger");
+        }
+        function sendData(){
+            var xhr = new XMLHttpRequest();
+            var url = "/article/";
+            var formData = new FormData(document.getElementById("addform"));
+            xhr.open('POST',url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                // readyState 4 artinya permintaan sudah selesai dilakukan
+                if (xhr.status === 200 || xhr.status === 201) { // status 200 atau 201 artinya permintaan berhasil dilakukan
+                    console.log("Permintaan berhasil dilakukan");
+                    alert('Berhasil memasukkan data');
+                    window.location.replace("/");
+                } else {
+                    alert('Gagal memasukkan data');
+                    console.log("Permintaan gagal dilakukan. Status: " + xhr.status);
+                }
+            }
+            }
+            xhr.send(JSON.stringify(Object.fromEntries(formData)));
+        }
+    </script>
+</html>

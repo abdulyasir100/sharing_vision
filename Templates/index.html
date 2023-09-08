@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post List</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Post List</h1>
+		<!-- Tabel untuk menampilkan data -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Category</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for post in articles %}
+				<tr>
+					<td>{{ post.title }}</td>
+					<td>{{ post.category }}</td>
+					<td>{{ post.status }}</td>
+					<td>
+						<!-- Icon edit -->
+						<a href="/editarticle/{{ post.id }}"><i class="fas fa-edit"></i></a>
+						<!-- Icon hapus -->
+						<a href="/hapusarticle/{{ post.id }}"><i class="fas fa-trash"></i></a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</body>
+</html>
