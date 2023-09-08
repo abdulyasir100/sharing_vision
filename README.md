@@ -35,7 +35,7 @@ Hasil dari collection dapat dilihat pada Article Requests.postman_collection.jso
 1. Menampilkan setiap posts yang ada pada table "posts" dalam bentuk tabel yang dimana terdapat tombol edit dan juga
 hapus yang terhubung ke endpoint edit dan hapus. File dapat dilihat pada index.html dan juga editarticle.html
 
-![Halaman index](./images/indexhmtl.jpg)
+![Halaman index](./images/indexhtml.jpg)
 
 ![Edit article](./images/editarticle.jpg)
 
