@@ -46,6 +46,6 @@ request ke endpoint yang telah dibuat pada test back-end sebelumnya dengan metod
 3. Menampilkan data article sesuai dengan id yang ada pada url. Halaman akan menampilkan data berupa 
 'title','content','category',dan 'status'
 
-![New article](./images/newarticle.jpg)
+![Add article](./images/addarticle.jpg)
 
 ![Preview article](./images/previewarticle.jpg)
