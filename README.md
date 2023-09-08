@@ -1,6 +1,6 @@
 # Test Back-end dan Front-end Sharing Vision
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Test Back-end dan juga Front-end Sharing Vision untuk posisi Full-stack Developer
 
 ## Back-end Test
 
@@ -18,15 +18,15 @@ dengan parameter 'title','content','category',dan 'status'
 5. Membuat Postman Collection dari applikasi postman yang menjalan request terhadap tiap endpoint yang ditambah.
 Hasil dari collection dapat dilihat pada Article Requests.postman_collection.json
 
-[![Postman Result 1][postman-result-1]](./images/postman1.jpg)
+[![Postman Result 1][postman-result-1]](images/postman1.jpg)
 
-[![Postman Result 2][postman-result-2]](./images/postman2.jpg)
+[![Postman Result 2][postman-result-2]](images/postman2.jpg)
 
-[![Postman Result 3][postman-result-3]](./images/postman3.jpg)
+[![Postman Result 3][postman-result-3]](images/postman3.jpg)
 
-[![Postman Result 4][postman-result-4]](./images/postman4.jpg)
+[![Postman Result 4][postman-result-4]](images/postman4.jpg)
 
-[![Postman Result 5][postman-result-5]](./images/postman5.jpg)
+[![Postman Result 5][postman-result-5]](images/postman5.jpg)
 
 ## Front-end Test
 
@@ -35,9 +35,9 @@ Hasil dari collection dapat dilihat pada Article Requests.postman_collection.jso
 1. Menampilkan setiap posts yang ada pada table "posts" dalam bentuk tabel yang dimana terdapat tombol edit dan juga
 hapus yang terhubung ke endpoint edit dan hapus. File dapat dilihat pada index.html dan juga editarticle.html
 
-[![Halaman index][halaman-index]](./images/indexhmtl.jpg)
+[![Halaman index][halaman-index]](images/indexhmtl.jpg)
 
-[![Edit article][edit-article]](./images/editarticle.jpg)
+[![Edit article][edit-article]](images/editarticle.jpg)
 
 ### Halaman add new dan preview
 
@@ -46,6 +46,6 @@ request ke endpoint yang telah dibuat pada test back-end sebelumnya dengan metod
 3. Menampilkan data article sesuai dengan id yang ada pada url. Halaman akan menampilkan data berupa 
 'title','content','category',dan 'status'
 
-[![New article][new-article]](./images/newarticle.jpg)
+[![New article][new-article]](images/newarticle.jpg)
 
-[![Preview article][preview-article]](./images/previewarticle.jpg)
+[![Preview article][preview-article]](images/previewarticle.jpg)
